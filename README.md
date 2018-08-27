@@ -27,14 +27,15 @@ Run `carthage update` to build the framework and drag the built `Bridge.framewor
 
 If you prefer not to use either of the aforementioned dependency managers, you can integrate Bridge into your project manually.
 
----
+
 ## Usage
 
-### Transforming Obj-C exceptions into Swift errors that you can catch
+### Exceptions
+#### Transforming Obj-C exceptions into Swift errors that you can catch
 
 Let's say you have an Objective-C interface that includes a method like this:
 
-```
+```objc
 @interface MyStore : NSObject
 // Note: throws an exception if object can't be found
 + (id) objectForIdentifier:(String)identifier {...}
@@ -42,7 +43,7 @@ Let's say you have an Objective-C interface that includes a method like this:
 ```
 Using it from Swift looks like this in cases where there is no object for the passed identifier:
 
-```
+```swift
 let identifier = "acb123" 
 let object = MyStore.object(forIdentifier: identifier) --> 💥
 ```
@@ -50,7 +51,7 @@ Your app crashes while trying to do that lookup—which is a bit unexpected base
 
 Bridge to the rescue:
 
-```
+```objc
 let identifier = "acb123" 
 do {
 	let object = try ObjC.throwing { MyStore.object(forIdentifier: identifier) }
