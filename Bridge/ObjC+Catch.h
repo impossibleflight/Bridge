@@ -12,6 +12,6 @@
 
 @interface ObjC (Catch)
 
-+ (BOOL) performThrowingErrorsForExceptions:(void(^)(void))block error:(NSError **)errorPtr NS_SWIFT_NAME(performThrowingErrorsForExceptions(block:));
++ (BOOL) objc_performThrowingErrorsForExceptions:(void(^)(void))block error:(NSError **)errorPtr NS_SWIFT_NAME(objc_performThrowingErrorsForExceptions(block:));
 
 @end

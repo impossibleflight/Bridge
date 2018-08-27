@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A4295419213480BD00ECE976 /* Bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = A4295417213480BD00ECE976 /* Bridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A42954212134810A00ECE976 /* ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = A429541F2134810A00ECE976 /* ObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A42954212134810A00ECE976 /* ObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = A429541F2134810A00ECE976 /* ObjC.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A42954222134810A00ECE976 /* ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = A42954202134810A00ECE976 /* ObjC.m */; };
 		A42954262134814200ECE976 /* ObjC+Catch.m in Sources */ = {isa = PBXBuildFile; fileRef = A42954232134814200ECE976 /* ObjC+Catch.m */; };
 		A42954272134814200ECE976 /* ObjC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42954242134814200ECE976 /* ObjC.swift */; };
-		A42954282134814200ECE976 /* ObjC+Catch.h in Headers */ = {isa = PBXBuildFile; fileRef = A42954252134814200ECE976 /* ObjC+Catch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A42954282134814200ECE976 /* ObjC+Catch.h in Headers */ = {isa = PBXBuildFile; fileRef = A42954252134814200ECE976 /* ObjC+Catch.h */; settings = {ATTRIBUTES = (Private, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +25,7 @@
 		A42954242134814200ECE976 /* ObjC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjC.swift; sourceTree = "<group>"; };
 		A42954252134814200ECE976 /* ObjC+Catch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ObjC+Catch.h"; sourceTree = "<group>"; };
 		A42954292134816300ECE976 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A42954362134AB2400ECE976 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +66,7 @@
 				A42954232134814200ECE976 /* ObjC+Catch.m */,
 				A42954242134814200ECE976 /* ObjC.swift */,
 				A4295418213480BD00ECE976 /* Info.plist */,
+				A42954362134AB2400ECE976 /* module.modulemap */,
 			);
 			path = Bridge;
 			sourceTree = "<group>";
@@ -300,6 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.impossibleflight.Bridge;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/Bridge\"";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,6 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.impossibleflight.Bridge;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "\"$(SRCROOT)/Bridge\"";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

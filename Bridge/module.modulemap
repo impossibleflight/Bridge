@@ -1,0 +1,6 @@
+module BridgePrivate {
+	header "ObjC.h"
+	header "ObjC+Catch.h"
+
+	export *
+}

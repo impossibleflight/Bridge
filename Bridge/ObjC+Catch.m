@@ -11,7 +11,7 @@
 
 @implementation ObjC (Catch)
 
-+ (BOOL) performThrowingErrorsForExceptions:(void(^)(void))block error:(NSError **)errorPtr {
++ (BOOL) objc_performThrowingErrorsForExceptions:(void(^)(void))block error:(NSError **)errorPtr {
 	@try {
 		block();
 	} @catch (NSException *exception) {

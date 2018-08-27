@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BridgePrivate
 
 public extension ObjC {
 	/// Runs the supplied block, catching any raised Objective-C exceptions and transforming them into errors that can be caught in Swift.
@@ -15,7 +16,7 @@ public extension ObjC {
 	/// - Throws: an error that wraps the underlying exception
 	public static func throwing(_ closure:@escaping (()throws->Void)) throws {
 		var e: Error?
-		try ObjC.performThrowingErrorsForExceptions {
+		try ObjC.objc_performThrowingErrorsForExceptions {
 			// objc blocks can't throw swift errors
 			do {
 				try closure()
@@ -34,7 +35,7 @@ public extension ObjC {
 	public static func throwing<T>(_ closure:@escaping (()throws->T)) throws -> T {
 		var result: T!
 		var e: Error?
-		try ObjC.performThrowingErrorsForExceptions {
+		try ObjC.objc_performThrowingErrorsForExceptions {
 			// objc blocks can't throw swift errors
 			do {
 				result = try closure()
