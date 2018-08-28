@@ -9,9 +9,9 @@
 #import "ObjC+Catch.h"
 #import "ObjC.h"
 
-@implementation ObjC (Catch)
+@implementation _ObjC (Catch)
 
-+ (BOOL) objc_performThrowingErrorsForExceptions:(void(^)(void))block error:(NSError **)errorPtr {
++ (BOOL) _performThrowingErrorsForExceptions:(void(^)(void))block error:(NSError **)errorPtr {
 	@try {
 		block();
 	} @catch (NSException *exception) {

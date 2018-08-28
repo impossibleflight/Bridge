@@ -10,8 +10,8 @@
 
 #import "ObjC.h"
 
-@interface ObjC (Catch)
+@interface _ObjC (Catch)
 
-+ (BOOL) objc_performThrowingErrorsForExceptions:(void(^)(void))block error:(NSError **)errorPtr NS_SWIFT_NAME(objc_performThrowingErrorsForExceptions(block:));
++ (BOOL) _performThrowingErrorsForExceptions:(void(^)(void))block error:(NSError **)errorPtr NS_SWIFT_NAME(_performThrowingErrorsForExceptions(block:));
 
 @end

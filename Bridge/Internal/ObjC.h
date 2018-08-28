@@ -1,12 +1,12 @@
 //
-//  ObjC.m
+//  ObjC.h
 //  Bridge
 //
 //  Created by John Clayton on 8/27/18.
 //  Copyright © 2018 Impossible Flight, LLC. All rights reserved.
 //
 
-#import "ObjC.h"
+#import <Foundation/Foundation.h>
 
-@implementation ObjC
+@interface _ObjC : NSObject
 @end
