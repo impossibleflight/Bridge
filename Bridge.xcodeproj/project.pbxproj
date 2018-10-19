@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4080B87217A2BAD00EB2419 /* ObjectAssociable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4080B86217A2BAD00EB2419 /* ObjectAssociable.swift */; };
 		A4295419213480BD00ECE976 /* Bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = A4295417213480BD00ECE976 /* Bridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A429544F2134B07B00ECE976 /* BridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A429544E2134B07B00ECE976 /* BridgeTests.swift */; };
 		A42954512134B07B00ECE976 /* Bridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4295414213480BD00ECE976 /* Bridge.framework */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4080B86217A2BAD00EB2419 /* ObjectAssociable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectAssociable.swift; sourceTree = "<group>"; };
 		A4295414213480BD00ECE976 /* Bridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4295417213480BD00ECE976 /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		A4295418213480BD00ECE976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				A4295417213480BD00ECE976 /* Bridge.h */,
 				A42954622134B34400ECE976 /* Bridge-internal.h */,
 				A42954242134814200ECE976 /* ObjC.swift */,
+				A4080B86217A2BAD00EB2419 /* ObjectAssociable.swift */,
 				A429545F2134B2A600ECE976 /* Internal */,
 				A4295418213480BD00ECE976 /* Info.plist */,
 			);
@@ -236,6 +239,7 @@
 			files = (
 				A429545C2134B1F100ECE976 /* ObjC.swift in Sources */,
 				A429545D2134B29C00ECE976 /* ObjC+Catch.m in Sources */,
+				A4080B87217A2BAD00EB2419 /* ObjectAssociable.swift in Sources */,
 				A429545E2134B29C00ECE976 /* ObjC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

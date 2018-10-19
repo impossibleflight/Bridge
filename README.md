@@ -1,6 +1,6 @@
 #  Bridge
 
-Bridge helps make using Objective-C code in Swift more Swift-like.  
+Bridge helps make interacting with Objective-C and the Objective-C runtime in Swift more Swift-like.  
 
 ## Installation
 
@@ -33,11 +33,11 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 ### Exceptions
 #### Transforming Obj-C exceptions into Swift errors that you can catch
 
-Let's say you have an Objective-C interface that includes a method like this:
+Let's say you have an Obj-C interface that includes a method like this:
 
 ```objc
 @interface MyStore : NSObject
-// Note: throws an exception if object can't be found
+// Note: raises an exception if object can't be found
 - (id) objectForIdentifier:(String)identifier {...}
 @end
 ```
@@ -51,13 +51,31 @@ Your app crashes while trying to do that lookup—which is a bit unexpected base
 
 Bridge to the rescue:
 
-```objc
+```swift
 let identifierForMissingObject = "acb123" 
 do {
 	let object = try ObjC.throwing { myStore.object(forIdentifier: identifierForMissingObject) }
 	// do something with your object 
 } catch {
 	// uh oh. let's handle this.
+}
+```
+
+### Associated Objects
+#### Strongly typed associations using the Obj-C runtime
+
+Easily create strongly typed object associations:
+
+```swift
+extension Foo : ObjectAssociable {
+	var bar: NSNumber {
+		get {
+			return get(associatedObjectForKey: &AssociationKeys.bar) ?? 0
+		}
+		set {
+			set(associatedObject: newValue, forKey: &AssociationKeys.bar)
+		}
+	}
 }
 ```
 
